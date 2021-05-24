@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main() {
+	int n;
+	cin>>n;
+	int arr[n];
+	for(int i=0;i<n;i++) {
+		cin>>arr[i];
+	}
+	int *maxi = max_element(arr,arr+n);
+	int freq[*maxi+1]={0};
+	for(int i=0;i<n;i++) {
+		freq[arr[i]]++;
+	}
+	int value=0,index;
+	for(int i=1;i<=*maxi;i++) {
+		if(value<freq[i]) {
+			value = freq[i];
+			cust = i;
+		}
+	}
+	cout<<"Customer with id: "<<index<<" visited: "<<value<<"times";
+	return 0;
+}
