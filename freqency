@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n, a;
+    cin>>n;
+    map<int, int> frequ;
+    for(int i=0; i<n; i++)
+    {
+        cin>>a;
+        frequ[a]++;
+    }
+    int index, maximum=0;
+    for(auto it:frequ)
+    {
+        if(it.second > maxim)
+        {
+            maximum = it.second;
+            index = it.first;
+        }
+    }
+    cout<<"Customed id: "<<index<<" arrived more frequently";
+    return 0;
+}
